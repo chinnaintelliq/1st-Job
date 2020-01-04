@@ -54,3 +54,40 @@ git add .
 git commit -m "f"
 git merge test
 git log --oneline
+touch a1
+git add .
+git commit -m "a1"
+git commit -m "A1"
+touch a1
+git add .
+git commit -m "A1"
+touch a2
+git add .
+git commit -m "A2"
+git checkout -b test
+git checkout -b txst
+touch a3
+git add .
+git commit -m "A3"
+touch a4
+git add .
+git commit -m "A4"
+git checkout master
+touch a5
+git add .
+git commit -m "A5"
+touch a6
+git add .
+git commit -m "A6"
+git checkout master
+git checkout text
+git checkout txst
+git rebase master
+git checkout master
+git merge txst
+git log --oneline
+touch b1
+git add .
+git commit -m "B1"
+touch b2
+git add .
